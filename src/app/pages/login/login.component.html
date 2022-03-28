@@ -1,16 +1,22 @@
 <div fxLayoutAlign="center center" fxFlexFill class="main-div">
     <mat-card fxFlex="25">
-        <mat-toolbar color="primary" fxLayoutAlign="center center">CGI</mat-toolbar>
+        <mat-toolbar class="color-toolbar" fxLayoutAlign="center center">CGI</mat-toolbar>
         <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
-            <mat-form-field>           
-              <input matInput type="email" placeholder="Email">
-            </mat-form-field>
           
-            <mat-form-field>           
-                <input matInput type="password" placeholder="Password">
-              </mat-form-field>
+            <app-text-input labelName="Email" typeName="email" inputName="email" [formControlInput]="formControlEmail">
+                <mat-error *ngIf="formControlEmail.invalid">{{getErrorMessageEmail()}}</mat-error>
+            </app-text-input> 
+            
+            <app-password-input [hide]="hide" [formControlInput]="formControlPassword">
+                <mat-error *ngIf="formControlPassword.invalid">{{getErrorMessagePassword()}}</mat-error>
+            </app-password-input>
+            
+            
+              
+            
               <button mat-raised-button type="submit">Login</button>
           </form>
+      
           
     </mat-card>
 </div>

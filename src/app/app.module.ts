@@ -11,12 +11,19 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { TextInputComponent } from './components/text-input/text-input.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
+import { PasswordInputComponent } from './components/password-input/password-input.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    TextInputComponent,
+    PasswordInputComponent
     
   ],
   imports: [
@@ -28,7 +35,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatIconModule
 
   ],
   providers: [],
