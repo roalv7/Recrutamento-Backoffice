@@ -15,6 +15,13 @@ import { TextInputComponent } from './components/text-input/text-input.component
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import { PasswordInputComponent } from './components/password-input/password-input.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
+import { ResultsTableComponent } from './components/results-table/results-table.component';
+import { ResultsComponent } from './pages/results/results.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ButtonComponent } from './components/button/button.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
@@ -23,8 +30,10 @@ import { PasswordInputComponent } from './components/password-input/password-inp
     AppComponent,
     LoginComponent,
     TextInputComponent,
-    PasswordInputComponent
-    
+    PasswordInputComponent,
+    ResultsTableComponent,
+    ResultsComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +47,11 @@ import { PasswordInputComponent } from './components/password-input/password-inp
     MatToolbarModule,
     FormsModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    MatPaginatorModule,
+    MatTableModule,
+    HttpClientModule,
+    MatSnackBarModule
 
   ],
   providers: [],

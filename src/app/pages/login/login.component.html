@@ -1,7 +1,7 @@
 <div fxLayoutAlign="center center" fxFlexFill class="main-div">
     <mat-card fxFlex="25">
         <mat-toolbar class="color-toolbar" fxLayoutAlign="center center">CGI</mat-toolbar>
-        <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+        <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" (ngSubmit)= "submitHandle()">
           
             <app-text-input labelName="Email" typeName="email" inputName="email" [formControlInput]="formControlEmail">
                 <mat-error *ngIf="formControlEmail.invalid">{{getErrorMessageEmail()}}</mat-error>
@@ -13,8 +13,8 @@
             
             
               
-            
-              <button mat-raised-button type="submit">Login</button>
+            <app-button fxLayoutAlign="stretch" fxLayout="column"></app-button>
+              
           </form>
       
           
